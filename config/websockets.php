@@ -13,10 +13,10 @@ return [
      */
     'apps' => [
         [
-            'id' => env('PUSHER_APP_ID'),
-            'name' => env('APP_NAME'),
-            'key' => env('PUSHER_APP_KEY'),
-            'secret' => env('PUSHER_APP_SECRET'),
+            'id' => '123',
+            'name' => 'itro',
+            'key' => 'itro',
+            'secret' => 'itro@2018',
             'enable_client_messages' => false,
             'enable_statistics' => true,
         ],
@@ -98,18 +98,19 @@ return [
          * certificate chain of issuers. The private key also may be contained
          * in a separate file specified by local_pk.
          */
-        'local_cert' => null,
+        'local_cert' => '/etc/letsencrypt/live/poxa.itro.vn/fullchain.pem',
 
         /*
          * Path to local private key file on filesystem in case of separate files for
          * certificate (local_cert) and private key.
          */
-        'local_pk' => null,
+        'local_pk' => '/etc/letsencrypt/live/poxa.itro.vn/privkey.pem',
 
         /*
          * Passphrase for your local_cert file.
          */
         'passphrase' => null,
+	    'verify_peer' => false
     ],
 
     /*
